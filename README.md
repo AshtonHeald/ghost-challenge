@@ -1,6 +1,6 @@
 # Ghost Challenge
 
-The **Ghost Challenge** project is a dynamic web app built with Vue, designed to showcase stories through an engaging carousel interface. It leverages advanced animations and styling to create a smooth, interactive user experience. This project integrates **Swiper** for the carousel functionality, **GSAP** for animations, **Google Fonts** via Fontsource, and **vite-svg-loader** for handling SVG files.
+The **Ghost Challenge**: make desktop design responsive for various screen sizes.
 
 ## Table of Contents
 1. [Tech Stack](#tech-stack)
