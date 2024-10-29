@@ -6,10 +6,7 @@ The **Ghost Challenge**: make desktop design responsive for various screen sizes
 1. [Tech Stack](#tech-stack)
 2. [Getting Started](#getting-started)
 3. [Scripts](#scripts)
-4. [Project Structure](#project-structure)
-5. [Features](#features)
-6. [Challenges](#challenges)
-7. [Acknowledgments](#acknowledgments)
+
 
 ## Tech Stack
 
@@ -56,50 +53,4 @@ Below are the main scripts used in this project:
 * **Build for production:** `pnpm run build`
 * **Preview production build:** `pnpm run preview`
 
-## Project Structure
 
-```
-├── public/          # Static files
-├── src/
-│   ├── assets/      # Project assets (images, fonts, etc.)
-│   ├── components/  # Vue components
-│   ├── App.vue      # Root component
-│   └── main.js      # Main JavaScript entry file
-├── .gitignore       # Git ignore file
-└── README.md        # Project README
-```
-
-## Features
-
-* **Interactive Carousel:** Implemented with Swiper for smooth slide transitions and controls
-* **Engaging Animations:** Leveraging GSAP for animations that enhance the user experience
-* **Responsive Design:** Optimized for various screen sizes for accessibility on all devices
-* **Custom SVG Handling:** Using vite-svg-loader to import SVG files as Vue components
-
-## Challenges
-
-During the development of this project, we faced a few challenges:
-
-1. **Integrating Swiper with Vue 3**: The migration from Swiper 5 to Swiper 6 required some adjustments to the implementation, as the API had changed. We had to update our code to match the new Swiper 6 syntax and features.
-
-2. **Achieving Smooth Animations**: Implementing the complex animations using GSAP took some time to get the timing and easing just right. We had to experiment with different approaches to ensure a seamless user experience.
-
-3. **Handling SVG Assets**: The use of vite-svg-loader was a new concept for our team, and we had to learn how to properly import and use SVG files as Vue components. This added an extra step to our asset management process.
-
-We overcame these challenges through careful research, experimentation, and collaboration within the team. The end result is a polished and visually engaging web application.
-
-## Acknowledgments
-
-* [Vue.js](https://vuejs.org/) - The progressive JavaScript framework used in this project
-* [Swiper](https://swiperjs.com/) - The library used for carousel functionality
-* [GSAP](https://greensock.com/gsap/) - The animation library for high-performance animations
-* [Fontsource](https://fontsource.org/) - The source of Google Fonts for this project
-* [vite-svg-loader](https://github.com/jpkleemans/vite-svg-loader) - The plugin that enables importing SVG files as Vue components
-
-## License
-
-This project is open-source and available under the MIT License.
-
----
-
-**Note:** For any additional questions or support, please open an issue in the GitHub repository.
