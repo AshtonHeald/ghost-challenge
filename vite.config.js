@@ -16,4 +16,5 @@ export default defineConfig({
     }),
     svgLoader(),
   ],
+  base: '/ghost-challenge/',
 });
