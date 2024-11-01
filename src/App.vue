@@ -46,39 +46,16 @@ const slideComponents = [
   },
 ];
 const currentSlideContent = ref(slideComponents[0].content);
-const hasInteracted = ref(false); // Flag to track user interaction
+const hasInteracted = ref(false);
 
 // Watch for changes in `currentSlideContent`
 watch(currentSlideContent, async () => {
   if (hasInteracted.value) {
     await nextTick();
-
-    // GSAP matchMedia for responsive animations
-    gsap.matchMedia().add(
-      {
-        // Media query for larger screens
-        isDesktop: "(min-width: 1024px)",
-        // Media query for smaller screens
-        isMobile: "(max-width: 1023px)",
-      },
-      (context) => {
-        // Apply animation based on media query match
-        if (context.conditions.isDesktop) {
-          // Desktop animation: fade in and slide up
-          gsap.fromTo(
-            ".animated-content",
-            { opacity: 0, y: 30 },
-            { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
-          );
-        } else if (context.conditions.isMobile) {
-          // Mobile animation: fade in and slide from the left
-          gsap.fromTo(
-            ".animated-content",
-            { opacity: 0, x: 50 },
-            { opacity: 1, x: 0, duration: 0.5, ease: "power2.out" }
-          );
-        }
-      }
+    gsap.fromTo(
+      ".animated-content",
+      { opacity: 0, y: 30 },
+      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }
     );
   }
 });
@@ -102,9 +79,7 @@ const onSlideChange = (realIndex) => {
     </div>
     <div class="content-container">
       <h1 class="animated-content">{{ currentSlideContent.title }}</h1>
-
       <Carousel :slides="slideComponents" @swiperslidechange="onSlideChange" />
-
       <p class="animated-content">{{ currentSlideContent.description }}</p>
       <button class="CTA-button">
         More Client Stories
@@ -149,7 +124,7 @@ h1 {
 }
 p {
   margin-bottom: 20px;
-  height: 115px;
+  min-height: 115px;
   line-height: 23px;
 }
 .swiper-container-wrapper {
